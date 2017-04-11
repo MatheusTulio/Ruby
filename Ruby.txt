@@ -1,0 +1,110 @@
+Comandos em Ruby :
+
+string.reverse -- >> Escreve a string de trás para frente
+
+string/array/algumacoisa -->> Tamanho do que voce quer analisar
+
+Multiplicar uma string por um nome faz ela repetir a string n vezes
+
+Se eu quiser usar reverse em um número, primeiro tenh oque tranformá-lo em uma string ( to_s )
+
+[] -->> cria um vetor
+
+array.max -->> mostra o maior elemento do vetor
+
+array.sort -->> Ordena o vetor
+
+! -->> faz com que a operação seja feita no proprio coiso que esteja sendo usado, sem fazer uma copia do que esta sendo usado.
+
+array['x'] = 'n' -->> Procura pelo primeiro 'x' no vetor e substitui por 'n'
+
+array.lines.to_a.reverse -->> tranforma cada linha em um array, mantém eles escritos de forma correta, mas inverte a ordem das linhas.
+
+array.lines.to_a.reverse.join -->> Junta os arrays(Linhas) anteriormente separados em um só novamente.
+
+array.include? "blabla" -->> Verifica se "blabla" está no vetor;
+
+"array".casecmp? ("array") -->> compara de os dois vetores são iguais
+
+array.downcase -->> Deixas todos os caracteres com letra minúscula
+
+array.delete ("x") -->> deleta o elemento "x" no array se ele existir
+
+array.delete_at(x)  -->> deleta o elemento na posição x
+
+array.delete_if ()  -->> deleta os elementos que nao satisfazem a condição
+
+aux = {} -->> Cria um Hash
+
+Hash é tipo um dicionário, tem uma chave e essa chave guarda um valor
+
+aux [key] = valor -->> define key como chave para o valor.
+Isso é bom porque usar esse valor mais de uma vez nao gastará mais memoria uma vez que a variavel já foi criada, pode ser usada varias vezes.
+
+Hash.keys -->> Mostra todas as chaves do Hash.
+
+n.times {} -->> faz o que esta dentro das chaves ser feito n vezes
+
+Dir.entries "" -->> Lista tudo que tem dentro do diretório que foi colocado
+
+Dir[] -->> Procura por um arquivo com alguns tipos de especificações, por exemplo "/*.txt"
+
+File.read () -->> Le o arquivo
+
+FileUtils.cp('a', 'b') -->> Copio o arquivo de um diretório pra outro.
+
+File.open("", "") do |f| -->> Colocar algo a mais no fim do arquivo, adicionar na ultima linha. Definir em f, Exemplo : f << "blablabla"
+
+File.mtime() -->> verifica a ultima vez que o arquivo foi mudado
+
+File.mtime().hour   -->> Ultima hora
+
+def xxx () -->> define um novo método
+
+File.foreach (y) |x|  -->> Itera de x em funçao do objeto  y
+
+require "popup" -->> carrega um popup
+
+Popup.goto­ " " -->> cria uma aba com um popup
+
+Popup.make -->> popula o popup, é uma função que abre o espaço para a criação do link para o site
+
+h1 -->> é um titulo, h1 é o maior de maior tamanho de fonte.
+
+link "nome do link", "Para onde ele é direcionado" -->> Cria o Link
+
+split -->> separa a string em outras menores com base na especificação
+
+strip -->> tira os espaços em branco no começo e no fim da string
+
+attr_accessor :var -->> Permite alterar a variavel var, tanto ler como mudar
+
+attr_reader :var -->> Permite ler a variavel var
+
+attr_writter :var -->> Permite definir a variavel var
+
+self.class -->> Fala a si mesmo, trata-se da própria classe
+
+variavel.inspect -->> Mostra todos os atributos impostos a variavel
+
+def initialize -->> faz a classe ter atributos pré definidos
+
+Funções que terminam com "?" retornam sempre True ou False
+
+var.instance_methods -->> Mostra todos os metodos que a variavel responde, no  caso var foi igualada a uma classe, logo, mostra todos os metodos que a classe responde.
+
+var.instance_methods(false) -->> Mostra só os metodos criados dentro da classe,nao mostra os metodos herdados das suas classes pais.
+
+def var= ("") -->> Serve para atribuição, para acesso
+
+Herança de classes  :
+
+class classe_nova < super_classe -->> a nova classe irá herdar todos os metodos na super_classe.
+
+a classe_nova pode ter um metodo com o mesmo nome, assim, o metodo
+
+class.superclass -->> mostra a super classe da classe
+
+alias NOME new -->> cria um apelido para a classe, no caso NOME
+
+

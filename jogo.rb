@@ -164,13 +164,13 @@ while c == '1'
 		name1 = gets.chomp.capitalize
 		print 'Digite seu nome competidor 2: '
 		name2 = gets.chomp.capitalize
-		puts 'Tabela com os valores máximos :'
-		puts 'altura = 210     peso = 120     velocidade = 18     força = 100'
 		competidor1 = Trunfo.new(name1)
 		competidor2 = Trunfo.new(name2)
 		i = 0
 		a = "#{name1}"
 		while(i < 31 && competidor1.venceu < 16 && competidor2.venceu < 16)
+		  puts 'Tabela com os valores máximos :'
+		  puts 'altura = 210     peso = 120     velocidade = 18     força = 100'
 		  if a == "#{name1}"
 			n = 1
 			competidor1.Cartas
@@ -213,13 +213,13 @@ while c == '1'
 		print 'Digite seu nome competidor: '
 		name1 = gets.chomp.capitalize
 		puts 'Tente ganhar de mim ... Se Puder'
-		puts 'Tabela com os valores máximos :'
-		puts 'altura = 210     peso = 120     velocidade = 18     força = 100'
 		competidor1 = Computador.new(name1)
 		computador = Computador.new('Computador')
 		i = 0
 		a = "#{name1}"
 		while(i < 31 && competidor1.venceu < 16 && computador.venceu < 16)
+		  puts 'Tabela com os valores máximos :'
+		  puts 'altura = 210     peso = 120     velocidade = 18     força = 100'
 		  if a == "#{name1}"
 			n = 1
 			competidor1.Cartas
@@ -255,6 +255,7 @@ while c == '1'
 			puts 'Como isso pode acontecer ...'
 		elsif competidor1.venceu < computador.venceu
 			puts "Eu venci o jogo com #{computador.venceu} vitórias!!"
+			puts "Você tinha apenas #{competidor1.venceu}"
 			puts 'Essa foi fácil'
 		else
 			puts'Nós empatamos, parece que teremos que jogar mais uma para resolvermos isso'

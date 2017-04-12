@@ -227,7 +227,7 @@ while c == '1'
 			while n != 0 
 				print "Escolha o atributo da sua carta #{name1}: "
 				escolha = gets.chomp
-				if escolha != 'velocidade' || escolha != 'altura' || escolha != 'peso' || escolha != 'força'
+				if escolha != 'velocidade' && escolha != 'altura' && escolha != 'peso' && escolha != 'força'
 						puts 'Esse atributo não é válido, escolha outro'
 						n = 1
 					else

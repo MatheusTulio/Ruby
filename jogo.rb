@@ -172,17 +172,26 @@ while c == '1'
 		a = "#{name1}"
 		while(i < 31 && competidor1.venceu < 16 && competidor2.venceu < 16)
 		  if a == "#{name1}"
+			n = 1
 			competidor1.Cartas
 			puts competidor1.inspect	
-			printf "Escolha o atributo da sua carta #{name1}: "
-			escolha = gets.chomp
+			while n != 0
+				print "Escolha o atributo da sua carta #{name1}: "
+				escolha = gets.chomp
+				if escolha != 'velocidade' && escolha != 'altura' && escolha != 'peso' && escolha != 'força'
+					puts 'Esse atributo não é válido, escolha outro'
+					n = 1
+				else
+					n = 0
+				end
+			end
 			competidor2.Cartas
 			puts competidor2.inspect
 			a = competidor1.duelar(competidor2, escolha.to_sym)
 		  else
 		  	competidor2.Cartas
 			puts competidor2.inspect
-			printf "Escolha o atributo da sua carta #{name2}: "
+			print "Escolha o atributo da sua carta #{name2}: "
 			escolha = gets.chomp
 			competidor1.Cartas
 			puts competidor1.inspect
@@ -212,10 +221,19 @@ while c == '1'
 		a = "#{name1}"
 		while(i < 31 && competidor1.venceu < 16 && computador.venceu < 16)
 		  if a == "#{name1}"
+			n = 1
 			competidor1.Cartas
 			puts competidor1.inspect	
-			printf "Escolha o atributo da sua carta #{name1}: "
-			escolha = gets.chomp
+			while n != 0 
+				print "Escolha o atributo da sua carta #{name1}: "
+				escolha = gets.chomp
+				if escolha != 'velocidade' || escolha != 'altura' || escolha != 'peso' || escolha != 'força'
+						puts 'Esse atributo não é válido, escolha outro'
+						n = 1
+					else
+						n = 0
+					end
+			end
 			computador.Cartas
 			puts computador.inspect
 			a = competidor1.duelar(computador, escolha.to_sym)
